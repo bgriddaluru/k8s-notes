@@ -52,3 +52,13 @@ Two important consequences:
 • An application holding an already-open file can continue reading the old version; it must reopen/reload to use the new contents.
 • A file mounted using  subPath  does not receive these automatic updates.
 
+
+================================================
+
+
+The same tmpfs is mounted at two different locations in different mount namespaces:
+
+Node:      /var/lib/kubelet/pods/<uid>/volumes/kubernetes.io~projected/<name>
+Container: /var/run/secrets/kubernetes.io/serviceaccount
+
+
